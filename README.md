@@ -1,3 +1,13 @@
+> ## 🚨 Important Notice
+>
+> This repository is a clone of the
+> [Pixel Perfect Tailwind](https://www.epicweb.dev/workshops/pixel-perfect-figma-to-tailwind)
+> by Epic Web. It has been published solely to document my GitHub activity
+> and for personal educational purposes.
+>
+> **Note:** This is not an official fork or a maintained derivative of the
+> original project.
+
 # [Pixel Perfect Tailwind](https://www.epicweb.dev/workshops)
 
 Become a better UI designer with Tailwind — intentionally or accidentally
