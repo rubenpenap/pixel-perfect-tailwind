@@ -1,31 +1,61 @@
-@import 'tailwindcss';
-
-/* 
-		🐨 Import the `easings` CSS variables
-		from 'open-props/easings'
-*/
+@import "tailwindcss";
+@import "open-props/easings";
 
 @theme {
-	--breakpoint-sm: 520px;
-	--breakpoint-lg: 976px;
-	--color-highlight: #6202ff;
-	--font-family-poppins: 'Poppins', sans-serif;
+  --breakpoint-sm: 520px;
+  --breakpoint-lg: 976px;
+  --color-highlight: #6202ff;
+  --font-family-poppins: "Poppins", sans-serif;
 
-	--font-size-4_5xl: 2.625rem;
-	--font-size-4_5xl--line-height: 1.15;
-	--font-size-5_5xl: 3.375rem;
-	--font-size-5_5xl--line-height: 1;
+  --font-size-4_5xl: 2.625rem;
+  --font-size-4_5xl--line-height: 1.15;
+  --font-size-5_5xl: 3.375rem;
+  --font-size-5_5xl--line-height: 1;
 
-	/* 
-		🐨 1. Define `keyframes` for the `roll-reveal`, `fade-in`, 
-		`slide-left` and `slide-top` animations.
+  @keyframes roll-reveal {
+    from {
+      transform: rotate(12deg) scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(0deg) scale(1);
+      opacity: 1;
+    }
+  }
 
-		Remember: those are defined as regular 
-		`@keyframes` CSS declarations.
-*/
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
-	/* 
-		🐨 2. Define `--animate-{name}` CSS variables 
-		for all four animations.
-*/
+  @keyframes slide-left {
+    from {
+      transform: translateX(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-top {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  --animate-roll-reveal: 0.4s roll-reveal var(--ease-spring-2) backwards;
+  --animate-fade-in: 0.4s fade-in ease-out backwards;
+  --animate-slide-top: 0.3s slide-top ease-out backwards;
+  --animate-slide-left: 0.3s slide-left ease-out backwards;
 }
